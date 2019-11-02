@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CEASAR">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="706.0" prefWidth="1289.0" stylesheets="@Style/Darktheme.css">
+            <children>
+                <TextArea fx:id="INPUT" layoutX="64.0" layoutY="126.0" prefHeight="252.0" prefWidth="428.0" promptText="INSERT YOUR TEXT HERE" wrapText="true" />
+                <TextArea fx:id="OUTPUT" layoutX="656.0" layoutY="126.0" prefHeight="252.0" prefWidth="452.0" promptText="YOUR OUTPUT HERE" />
+                <Button layoutX="67.0" layoutY="520.0" mnemonicParsing="false" onAction="#ENCRYPT" prefHeight="64.0" prefWidth="422.0" text="ENCRYPT">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font></Button>
+                <Button layoutX="655.0" layoutY="446.0" mnemonicParsing="false" onAction="#DECRYPT" prefHeight="64.0" prefWidth="452.0" text="DECRYPT">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="closeButton" layoutX="656.0" layoutY="520.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="64.0" prefWidth="452.0" text="CLOSE">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="chooseButton" layoutX="67.0" layoutY="446.0" mnemonicParsing="false" onAction="#Choose" prefHeight="64.0" prefWidth="422.0" text="BROWSE" textFill="#1e1b1b">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+                <Label layoutX="824.0" layoutY="58.0" prefHeight="56.0" prefWidth="116.0" text="OUTPUT">
+                    <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="ENCRYPTKEY1" layoutX="66.0" layoutY="396.0" prefHeight="25.0" prefWidth="422.0" promptText="KEY WORD" />
+                <Button layoutX="66.0" layoutY="592.0" mnemonicParsing="false" onAction="#BRUTEFORCE" prefHeight="64.0" prefWidth="422.0" text="BRUTEFORCE">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font></Button>
+                <Label id="label-copyright" layoutX="476.0" layoutY="675.0" prefHeight="17.0" prefWidth="227.0" stylesheets="@Style/Darktheme.css" text="Build by KHALIL DAOULAT  © CRISISLAB">
+                    <font>
+                        <Font name="Garamond" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="521.0" layoutY="176.0" prefHeight="104.0" prefWidth="100.0" text="Label">
+                    <effect>
+                        <ImageInput>
+                            <source>
+                                <Image url="file:/C:/Users/yama-/Desktop/AFFINE_CIPHER/src/sample/Images/1.png" />
+                            </source>
+                        </ImageInput>
+                    </effect>
+                </Label>
+                <MenuBar layoutY="-5.0" prefHeight="32.0" prefWidth="1289.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Label layoutX="228.0" layoutY="74.0" prefHeight="25.0" prefWidth="100.0" text="INPUT">
+                    <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="back" layoutX="36.0" layoutY="59.0" onMouseClicked="#back" prefHeight="41.0" prefWidth="51.0" text="Label">
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                    <effect>
+                        <ImageInput>
+                            <source>
+                                <Image url="file:/C:/Users/yama-/Desktop/AFFINE_CIPHER/src/sample/Images/2.png" />
+                            </source>
+                        </ImageInput>
+                    </effect>
+                </Label>
+            </children>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow color="#b95959" />
+                    </bumpInput>
+                    <light>
+                  <Light.Distant />
+                    </light>
+                </Lighting>
+            </effect>
+        </Pane>
+    </children>
+</GridPane>

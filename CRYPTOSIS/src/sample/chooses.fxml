@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+      <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="706.0" prefWidth="1227.0" stylesheets="@Style/Darktheme.css" GridPane.columnIndex="1">
+            <children>
+                <Button fx:id="closeButton" layoutX="643.0" layoutY="447.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="56.0" prefWidth="405.0" text="CLOSE">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="applyButton" layoutX="129.0" layoutY="447.0" mnemonicParsing="false" onAction="#APPLY" prefHeight="56.0" prefWidth="405.0" text="APPLY">
+                    <font>
+                        <Font name="Garamond Bold" size="12.0" />
+                    </font></Button>
+                <Label layoutX="468.0" layoutY="119.0" prefHeight="190.0" prefWidth="201.0" text="Label">
+                    <effect>
+                        <ImageInput>
+                            <source>
+                                <Image url="file:/C:/Users/yama-/Desktop/AFFINE_CIPHER/src/sample/Images/12.png" />
+                            </source>
+                        </ImageInput>
+                    </effect>
+                </Label>
+                <ComboBox id="ComboBox" fx:id="methods" layoutX="451.0" layoutY="309.0" prefHeight="56.0" prefWidth="248.0" promptText="CHOOSE YOUR METHOD" stylesheets="@Style/Darktheme.css" />
+            <MenuBar layoutY="-2.0" prefHeight="31.0" prefWidth="1227.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label id="label-copyright" layoutX="468.0" layoutY="675.0" prefHeight="17.0" prefWidth="227.0" stylesheets="@Style/Darktheme.css" text="Build by KHALIL DAOULAT  © CRISISLAB">
+               <font>
+                  <Font name="Garamond" size="12.0" />
+               </font>
+            </Label>
+            </children>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant />
+                    </light>
+                </Lighting>
+            </effect>
+        </Pane>
+    </children>
+</GridPane>
